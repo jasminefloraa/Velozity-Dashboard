@@ -1,0 +1,101 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+  color: #f5f5f5;
+  background: #0a0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: dark;
+
+  --black: #0a0a0a;
+  --black-soft: #111111;
+  --black-card: #161616;
+  --black-light: #1d1d1d;
+
+  --red: #e50914;
+  --red-bright: #ff2b35;
+  --red-dark: #b20710;
+  --red-soft: rgba(229, 9, 20, 0.12);
+  --red-border: rgba(229, 9, 20, 0.35);
+
+  --white: #ffffff;
+  --text: #f5f5f5;
+  --text-secondary: #b5b5b5;
+  --text-muted: #777777;
+
+  --border: #292929;
+  --border-light: #333333;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #60a5fa;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(229, 9, 20, 0.08),
+      transparent 28%
+    ),
+    var(--black);
+  color: var(--text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  color: var(--text);
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
