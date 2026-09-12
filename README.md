@@ -323,7 +323,6 @@ Manakula Vinayagar Institute of Technology, Puducherry
 
 **Built with React, Node.js, Express & MongoDB**
 
-</div>
-
-
 This project was developed for educational and internship evaluation purposes.
+
+</div>
