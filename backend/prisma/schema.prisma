@@ -65,21 +65,12 @@ model Project {
   name        String
   description String?
   clientId    String
-  createdById  String
+  createdById String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  client  Client @relation(
-    fields: [clientId],
-    references: [id],
-    onDelete: Cascade
-  )
-
-  creator User @relation(
-    "ProjectCreator",
-    fields: [createdById],
-    references: [id]
-  )
+  client  Client @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  creator User   @relation("ProjectCreator", fields: [createdById], references: [id])
 
   tasks      Task[]
   activities ActivityLog[]
@@ -101,17 +92,8 @@ model Task {
   createdAt           DateTime   @default(now())
   updatedAt           DateTime   @updatedAt
 
-  project Project @relation(
-    fields: [projectId],
-    references: [id],
-    onDelete: Cascade
-  )
-
-  assignedDeveloper User? @relation(
-    "TaskDeveloper",
-    fields: [assignedDeveloperId],
-    references: [id]
-  )
+  project           Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  assignedDeveloper User?   @relation("TaskDeveloper", fields: [assignedDeveloperId], references: [id])
 
   statusHistory TaskStatusHistory[]
   activities    ActivityLog[]
@@ -131,18 +113,10 @@ model TaskStatusHistory {
   changedBy String
   oldStatus TaskStatus?
   newStatus TaskStatus
-  createdAt DateTime @default(now())
+  createdAt DateTime   @default(now())
 
-  task Task @relation(
-    fields: [taskId],
-    references: [id],
-    onDelete: Cascade
-  )
-
-  user User @relation(
-    fields: [changedBy],
-    references: [id]
-  )
+  task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [changedBy], references: [id])
 
   @@index([taskId])
   @@index([changedBy])
@@ -157,24 +131,11 @@ model ActivityLog {
   action    String
   oldStatus TaskStatus?
   newStatus TaskStatus?
-  createdAt DateTime @default(now())
+  createdAt DateTime   @default(now())
 
-  project Project @relation(
-    fields: [projectId],
-    references: [id],
-    onDelete: Cascade
-  )
-
-  task Task @relation(
-    fields: [taskId],
-    references: [id],
-    onDelete: Cascade
-  )
-
-  user User @relation(
-    fields: [userId],
-    references: [id]
-  )
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  task    Task    @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id])
 
   @@index([projectId, createdAt])
   @@index([taskId, createdAt])
@@ -191,35 +152,22 @@ model Notification {
   isRead    Boolean          @default(false)
   createdAt DateTime         @default(now())
 
-  user User @relation(
-    fields: [userId],
-    references: [id],
-    onDelete: Cascade
-  )
-
-  task Task @relation(
-    fields: [taskId],
-    references: [id],
-    onDelete: Cascade
-  )
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
 
   @@index([userId, isRead])
   @@index([createdAt])
 }
 
 model RefreshToken {
-  id        String   @id @default(cuid())
-  tokenHash String   @unique
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
   userId    String
   expiresAt DateTime
   revokedAt DateTime?
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 
-  user User @relation(
-    fields: [userId],
-    references: [id],
-    onDelete: Cascade
-  )
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([expiresAt])
