@@ -296,8 +296,7 @@ The application can be tested across the following areas:
 * Performance optimization
 
 ---
-<div align="center">
-### Author
+## Author
 
 ### Jasmine Flora J
 
@@ -305,17 +304,14 @@ The application can be tested across the following areas:
 
 Manakula Vinayagar Institute of Technology, Puducherry
 
-<br>
 
 [![GitHub](https://img.shields.io/badge/GitHub-jasminefloraa-181717?style=for-the-badge\&logo=github)](https://github.com/jasminefloraa)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Jasmine%20Flora-0A66C2?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/jasmine-flora/)
 
-</div>
 
 ---
 
-<div align="center">
 
 ### Velozity Dashboard
 
@@ -323,4 +319,3 @@ Manakula Vinayagar Institute of Technology, Puducherry
 
 This project was developed for educational and internship evaluation purposes.
 
-</div>
