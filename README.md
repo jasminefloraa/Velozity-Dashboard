@@ -1,25 +1,87 @@
+<div align="center">
+
 # Velozity Dashboard
 
-A full-stack project management dashboard designed to help teams manage projects, tasks, users, and access permissions through a centralized web application.
+### A Modern Project & Task Management Dashboard
 
-## Overview
+<p>
+  <strong>Manage projects • Assign tasks • Control access • Track progress</strong>
+</p>
 
-Velozity Dashboard is a role-based project management application developed as part of a Software Developer internship assignment.
+<br>
 
-The application provides separate access and capabilities for different user roles, allowing teams to create and manage projects, assign tasks, monitor progress, and control project access.
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge\&logo=github)](https://github.com/jasminefloraa/Velozity-Dashboard)
 
-## Features
+</div>
 
-* User authentication and authorization
-* Role-based access control
-* Project creation and management
-* Task creation, assignment, and status management
-* Developer project access management
-* Project and task filtering
-* Secure API communication
-* Dashboard-based project overview
-* User logout and session management
-* Responsive and user-friendly interface
+---
+
+## About The Project
+
+**Velozity Dashboard** is a full-stack project management platform designed to simplify project and task management through a centralized dashboard.
+
+The application provides role-based access for **Project Managers** and **Developers**, allowing teams to organize projects, manage tasks, control project access, and track work efficiently.
+
+> Built as part of a **Software Developer Internship Assignment**.
+
+---
+
+## Key Features
+
+<table>
+<tr>
+<td width="50%">
+
+### Authentication
+
+Secure user authentication with protected application resources.
+
+</td>
+<td width="50%">
+
+### Role-Based Access
+
+Different capabilities for Project Managers and Developers.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### Project Management
+
+Create, manage, and organize projects from a centralized dashboard.
+
+</td>
+<td width="50%">
+
+### Task Management
+
+Create, assign, update, and track project tasks.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### Developer Access
+
+Control which developers can access specific projects.
+
+</td>
+<td width="50%">
+
+### Dashboard
+
+View projects and tasks through a clean and organized interface.
+
+</td>
+</tr>
+</table>
+
+---
 
 ## User Roles
 
@@ -28,99 +90,148 @@ The application provides separate access and capabilities for different user rol
 Project Managers can:
 
 * Create and manage projects
-* Add and manage project tasks
+* Create and manage tasks
 * Assign tasks to developers
-* Manage project access
+* Manage developer project access
 * Monitor project and task progress
 
 ### Developer
 
 Developers can:
 
-* View projects they have access to
+* View accessible projects
 * View assigned tasks
 * Update task status
-* Work with project-related tasks based on their permissions
+* Work on tasks based on their permissions
 
-## Technology Stack
+---
+
+## Tech Stack
+
+<div align="center">
 
 ### Frontend
 
-* React.js
-* JavaScript
-* HTML
-* CSS
+![React](https://img.shields.io/badge/React-2026?style=for-the-badge\&logo=react\&logoColor=white\&color=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-2026?style=for-the-badge\&logo=javascript\&logoColor=black\&color=F7DF1E)
+![HTML5](https://img.shields.io/badge/HTML5-2026?style=for-the-badge\&logo=html5\&logoColor=white\&color=E34F26)
+![CSS3](https://img.shields.io/badge/CSS3-2026?style=for-the-badge\&logo=css3\&logoColor=white\&color=1572B6)
 
 ### Backend
 
-* Node.js
-* Express.js
+![Node.js](https://img.shields.io/badge/Node.js-2026?style=for-the-badge\&logo=node.js\&logoColor=white\&color=339933)
+![Express](https://img.shields.io/badge/Express.js-2026?style=for-the-badge\&logo=express\&logoColor=white\&color=000000)
 
 ### Database
 
-* MongoDB
+![MongoDB](https://img.shields.io/badge/MongoDB-2026?style=for-the-badge\&logo=mongodb\&logoColor=white\&color=47A248)
 
 ### Tools
 
-* Git
-* GitHub
-* Visual Studio Code
-* Postman
+![Git](https://img.shields.io/badge/Git-2026?style=for-the-badge\&logo=git\&logoColor=white\&color=F05032)
+![GitHub](https://img.shields.io/badge/GitHub-2026?style=for-the-badge\&logo=github\&logoColor=white\&color=181717)
+![Postman](https://img.shields.io/badge/Postman-2026?style=for-the-badge\&logo=postman\&logoColor=white\&color=FF6C37)
 
-## Application Structure
+</div>
+
+---
+
+## Application Flow
 
 ```text
-Velozity Dashboard
-├── frontend
-│   ├── components
-│   ├── pages
-│   ├── services
-│   └── ...
-│
-├── backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   ├── middleware
-│   └── ...
-│
-└── README.md
+                         ┌──────────────────────┐
+                         │   Velozity Dashboard │
+                         └──────────┬───────────┘
+                                    │
+                         ┌──────────▼───────────┐
+                         │   Authentication     │
+                         └──────────┬───────────┘
+                                    │
+                    ┌───────────────┴───────────────┐
+                    │                               │
+            ┌───────▼────────┐             ┌────────▼───────┐
+            │ Project Manager │             │    Developer   │
+            └───────┬────────┘             └────────┬───────┘
+                    │                               │
+          ┌─────────▼─────────┐             ┌────────▼────────┐
+          │ Project Management│             │ Accessible      │
+          │ Task Management   │             │ Projects & Tasks│
+          │ Access Management │             │ Status Updates  │
+          └───────────────────┘             └─────────────────┘
 ```
 
-## Authentication and Authorization
+---
 
-The application implements authentication and role-based authorization to control access to protected resources.
+## Project Structure
 
-Users can access functionality based on their assigned role and project permissions. Protected API routes are handled through backend authentication and authorization middleware.
+```text
+Velozity-Dashboard/
+│
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── ...
+│
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── ...
+│
+├── README.md
+└── ...
+```
 
-## Project Management
+---
 
-Project Managers can create projects and manage the associated tasks.
+## Authentication & Security
 
-Tasks can be assigned to developers and their status can be updated throughout the project lifecycle. This provides a centralized way to track project progress.
+The application uses authentication and authorization mechanisms to protect application resources.
 
-## Developer Access Management
+Security considerations include:
 
-Project Managers can control which developers have access to specific projects.
+* Protected application resources
+* Role-based authorization
+* Project-level access control
+* Environment variables for sensitive configuration
+* Backend validation of user permissions
+* Protected API endpoints
 
-Developers can only work with projects and resources available to them according to their assigned permissions.
+> **Note:** Environment files containing secrets should never be committed to the repository.
 
-## API
+---
 
-The backend provides RESTful API endpoints for:
+## Getting Started
 
-* Authentication
-* User management
-* Projects
-* Tasks
-* Project access
-* Task status updates
+### Prerequisites
 
-API requests are handled by the Express.js backend and connected to MongoDB for data persistence.
+Make sure the following are installed:
 
-## Environment Variables
+* Node.js
+* npm
+* MongoDB
+* Git
 
-Create environment files for the frontend and backend and configure the required environment variables.
+### Clone Repository
+
+```bash
+git clone https://github.com/jasminefloraa/Velozity-Dashboard.git
+cd Velozity-Dashboard
+```
+
+### Install Dependencies
+
+Install the dependencies for the frontend and backend according to the project structure.
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create the required environment file and configure your local values.
 
 Example:
 
@@ -130,98 +241,89 @@ MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
 
-Do not commit environment files containing sensitive credentials to GitHub.
+### Run the Application
 
-## Installation and Setup
+Start the backend and frontend development servers according to the project configuration.
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/jasminefloraa/Velozity-Dashboard.git
-cd Velozity-Dashboard
-```
-
-### 2. Install Backend Dependencies
-
-```bash
-cd backend
-npm install
-```
-
-### 3. Configure Environment Variables
-
-Create the required `.env` file in the backend directory and add the required configuration values.
-
-### 4. Start the Backend
-
-```bash
-npm start
-```
-
-### 5. Install Frontend Dependencies
-
-Open a new terminal and navigate to the frontend directory:
-
-```bash
-cd frontend
-npm install
-```
-
-### 6. Start the Frontend
-
-```bash
-npm start
-```
-
-The application will then be available through the local development server.
+---
 
 ## Testing
 
-API endpoints can be tested using Postman.
+The application can be tested across the following areas:
 
-The application can be tested for:
+| Area           | Testing                         |
+| -------------- | ------------------------------- |
+| Authentication | Login and logout                |
+| Authorization  | Role-based access               |
+| Projects       | Create and manage projects      |
+| Tasks          | Create, assign and update tasks |
+| Access Control | Developer project permissions   |
+| API            | Backend endpoint testing        |
+| UI             | Dashboard and user interactions |
 
-* User authentication
-* Role-based access
-* Project creation and management
-* Task creation and assignment
-* Task status updates
-* Developer project access
-* Protected API routes
+---
 
-## Security Considerations
+## Screenshots
 
-The application follows basic security practices including:
+<div align="center">
 
-* Authentication for protected resources
-* Role-based authorization
-* Environment variables for sensitive configuration
-* Protected API routes
-* Validation of user access to projects and tasks
+### Dashboard
+
+<!-- Add your dashboard screenshot here -->
+
+<img src="screenshots/dashboard.png" alt="Velozity Dashboard" width="850"/>
+
+<br><br>
+
+### Project Management
+
+<!-- Add your project screenshot here -->
+
+<img src="screenshots/projects.png" alt="Project Management" width="850"/>
+
+</div>
+
+---
 
 ## Future Improvements
 
-Potential improvements include:
-
-* Advanced project analytics
 * Real-time notifications
-* Improved task filtering and sorting
+* Advanced project analytics
 * Activity and audit logs
-* Enhanced dashboard visualizations
+* Improved dashboard visualizations
 * Automated testing
-* Improved deployment and monitoring
+* Enhanced reporting
+* Performance optimization
+
+---
 
 ## Author
 
-**Jasmine Flora J**
+<div align="center">
 
-B.Tech Computer Science and Engineering
+### Jasmine Flora J
+
+**B.Tech Computer Science and Engineering**
+
 Manakula Vinayagar Institute of Technology, Puducherry
 
-GitHub: https://github.com/jasminefloraa
+<br>
 
-LinkedIn: https://www.linkedin.com/in/jasmine-flora/
+[![GitHub](https://img.shields.io/badge/GitHub-jasminefloraa-181717?style=for-the-badge\&logo=github)](https://github.com/jasminefloraa)
 
-## License
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Jasmine%20Flora-0A66C2?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/jasmine-flora/)
+
+</div>
+
+---
+
+<div align="center">
+
+### Velozity Dashboard
+
+**Built with React, Node.js, Express & MongoDB**
+
+</div>
+
 
 This project was developed for educational and internship evaluation purposes.
