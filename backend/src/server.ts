@@ -24,8 +24,8 @@ const io = new Server(
   httpServer,
   {
     cors: {
-      origin:
-        "http://localhost:5173",
+     origin:
+  "https://velozity-dashboard-puce.vercel.app",
       credentials: true,
     },
   }
@@ -492,9 +492,9 @@ io.on(
 httpServer.listen(
   PORT,
   () => {
-    console.log(
-      `Server running on http://localhost:${PORT}`
-    );
+   console.log(
+  `Server running on port ${PORT}`
+);
 
     startOverdueTaskJob();
   }
