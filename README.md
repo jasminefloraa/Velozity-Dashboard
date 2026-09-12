@@ -296,10 +296,8 @@ The application can be tested across the following areas:
 * Performance optimization
 
 ---
-
-## Author
-
 <div align="center">
+## Author
 
 ### Jasmine Flora J
 
