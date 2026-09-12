@@ -297,7 +297,7 @@ The application can be tested across the following areas:
 
 ---
 <div align="center">
-## Author
+### Author
 
 ### Jasmine Flora J
 
