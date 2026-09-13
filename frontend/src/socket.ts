@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://velozity-dashboard-jy7r.onrender.com", {
   withCredentials: true,
 });
 
