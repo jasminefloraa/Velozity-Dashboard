@@ -307,6 +307,15 @@ The application can be tested across the following areas:
 
 </div>
 
+### Task Management
+
+<!-- Add your task screenshot here -->
+
+<img src="screenshots/tasks.png.png" alt="Task Management" width="850"/>
+
+</div>
+
+
 ---
 
 ## Future Improvements
