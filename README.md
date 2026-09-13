@@ -85,6 +85,15 @@ View projects and tasks through a clean and organized interface.
 
 ## User Roles
 
+### Admin
+
+Admins can:
+
+* Manage users and user roles
+* Manage projects and tasks
+* Monitor overall project activity
+* Control access and permissions across the application
+
 ### Project Manager
 
 Project Managers can:
