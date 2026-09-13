@@ -295,7 +295,7 @@ The application can be tested across the following areas:
 
 <!-- Add your dashboard screenshot here -->
 
-<img src="screenshots/dashboard.png" alt="Velozity Dashboard" width="850"/>
+<img src="screenshots/dashboard.png.png" alt="Velozity Dashboard" width="850"/>
 
 <br><br>
 
@@ -303,7 +303,7 @@ The application can be tested across the following areas:
 
 <!-- Add your project screenshot here -->
 
-<img src="screenshots/projects.png" alt="Project Management" width="850"/>
+<img src="screenshots/projects.png.png" alt="Project Management" width="850"/>
 
 </div>
 
