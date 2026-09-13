@@ -18,9 +18,9 @@
 
 ## About The Project
 
-**Velozity Dashboard** is a full-stack project management platform designed to simplify project and task management through a centralized dashboard.
+**Velozity Dashboard** is a full-stack project and task management platform designed to simplify project management through a centralized dashboard.
 
-The application provides role-based access for **Project Managers** and **Developers**, allowing teams to organize projects, manage tasks, control project access, and track work efficiently.
+The application provides role-based access for **Admins, Project Managers, and Developers**, allowing teams to organize projects, manage tasks, control project access, assign work, and track progress efficiently.
 
 > Built as part of a **Software Developer Internship Assignment**.
 
@@ -41,7 +41,7 @@ Secure user authentication with protected application resources.
 
 ### Role-Based Access
 
-Different capabilities for Project Managers and Developers.
+Different capabilities for Admins, Project Managers, and Developers.
 
 </td>
 </tr>
@@ -162,7 +162,6 @@ Developers can:
 
 ---
 
-
 ## Application Flow
 
 ```text
@@ -174,17 +173,18 @@ Developers can:
                          │   Authentication     │
                          └──────────┬───────────┘
                                     │
-                    ┌───────────────┴───────────────┐
-                    │                               │
-            ┌───────▼────────┐             ┌────────▼───────┐
-            │ Project Manager │             │    Developer   │
-            └───────┬────────┘             └────────┬───────┘
-                    │                               │
-          ┌─────────▼─────────┐             ┌────────▼────────┐
-          │ Project Management│             │ Accessible      │
-          │ Task Management   │             │ Projects & Tasks│
-          │ Access Management │             │ Status Updates  │
-          └───────────────────┘             └─────────────────┘
+              ┌─────────────────────┼─────────────────────┐
+              │                     │                     │
+      ┌───────▼────────┐   ┌────────▼─────────┐   ┌──────▼───────┐
+      │      Admin     │   │ Project Manager  │   │  Developer   │
+      └───────┬────────┘   └────────┬─────────┘   └──────┬───────┘
+              │                     │                     │
+      ┌───────▼────────┐   ┌────────▼─────────┐   ┌──────▼────────┐
+      │ User & Access  │   │ Project & Task   │   │ Accessible     │
+      │ Management     │   │ Management       │   │ Projects &     │
+      │ Permissions    │   │ Developer Access │   │ Tasks          │
+      └────────────────┘   └──────────────────┘   │ Status Updates │
+                                                   └────────────────┘
 ```
 
 ---
@@ -195,17 +195,28 @@ Developers can:
 Velozity-Dashboard/
 │
 ├── frontend/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── api.js
+│   │   └── socket.js
 │   └── ...
 │
 ├── backend/
 │   ├── controllers/
-│   ├── models/
-│   ├── routes/
 │   ├── middleware/
+│   ├── routes/
+│   ├── prisma/
+│   │   ├── schema.prisma
+│   │   └── seed.ts
+│   ├── generated/
 │   └── ...
+│
+├── screenshots/
+│   ├── dashboard.png.png
+│   ├── projects.png.png
+│   └── tasks.png.png
 │
 ├── README.md
 └── ...
@@ -220,11 +231,14 @@ The application uses authentication and authorization mechanisms to protect appl
 Security considerations include:
 
 * Protected application resources
+* JWT-based authentication
 * Role-based authorization
 * Project-level access control
 * Environment variables for sensitive configuration
 * Backend validation of user permissions
 * Protected API endpoints
+* HTTP-only refresh token cookies
+* Password hashing before database storage
 
 > **Note:** Environment files containing secrets should never be committed to the repository.
 
@@ -238,7 +252,7 @@ Make sure the following are installed:
 
 * Node.js
 * npm
-* MongoDB
+* PostgreSQL
 * Git
 
 ### Clone Repository
@@ -264,8 +278,24 @@ Example:
 
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
+DATABASE_URL=your_postgresql_connection_string
 JWT_SECRET=your_jwt_secret
+```
+
+### Database Setup
+
+Run the Prisma database setup commands from the backend directory:
+
+```bash
+cd backend
+npx prisma generate
+npx prisma db push
+```
+
+To populate the database with the demo data:
+
+```bash
+npx tsx prisma/seed.ts
 ```
 
 ### Run the Application
@@ -320,27 +350,21 @@ The application can be tested across the following areas:
 
 ### Dashboard
 
-<!-- Add your dashboard screenshot here -->
-
 <img src="screenshots/dashboard.png.png" alt="Velozity Dashboard" width="850"/>
 
 <br><br>
 
 ### Project Management
 
-<!-- Add your project screenshot here -->
-
 <img src="screenshots/projects.png.png" alt="Project Management" width="850"/>
 
+<br><br>
 
 ### Task Management
-
-<!-- Add your task screenshot here -->
 
 <img src="screenshots/tasks.png.png" alt="Task Management" width="850"/>
 
 </div>
-
 
 ---
 
@@ -372,6 +396,6 @@ Manakula Vinayagar Institute of Technology, Puducherry
 
 ### Velozity Dashboard
 
-**Built with React, Node.js, Express & MongoDB**
+**Built with React, Node.js, Express, PostgreSQL & Prisma**
 
 This project was developed for educational and internship evaluation purposes.
