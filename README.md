@@ -133,7 +133,19 @@ Developers can:
 
 ### Database
 
-![MongoDB](https://img.shields.io/badge/MongoDB-2026?style=for-the-badge\&logo=mongodb\&logoColor=white\&color=47A248)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-2026?style=for-the-badge\&logo=postgresql\&logoColor=white\&color=4169E1)
+
+### ORM
+
+![Prisma](https://img.shields.io/badge/Prisma-2026?style=for-the-badge\&logo=prisma\&logoColor=white\&color=2D3748)
+
+### Real-Time Communication
+
+![Socket.IO](https://img.shields.io/badge/Socket.IO-2026?style=for-the-badge\&logo=socketdotio\&logoColor=white\&color=010101)
+
+### Authentication
+
+![JWT](https://img.shields.io/badge/JWT-2026?style=for-the-badge\&logo=jsonwebtokens\&logoColor=white\&color=000000)
 
 ### Tools
 
@@ -141,9 +153,15 @@ Developers can:
 ![GitHub](https://img.shields.io/badge/GitHub-2026?style=for-the-badge\&logo=github\&logoColor=white\&color=181717)
 ![Postman](https://img.shields.io/badge/Postman-2026?style=for-the-badge\&logo=postman\&logoColor=white\&color=FF6C37)
 
+### Deployment
+
+![Vercel](https://img.shields.io/badge/Vercel-2026?style=for-the-badge\&logo=vercel\&logoColor=white\&color=000000)
+![Render](https://img.shields.io/badge/Render-2026?style=for-the-badge\&logo=render\&logoColor=white\&color=46E3B7)
+
 </div>
 
 ---
+
 
 ## Application Flow
 
