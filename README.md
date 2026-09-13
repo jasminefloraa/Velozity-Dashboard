@@ -305,7 +305,6 @@ The application can be tested across the following areas:
 
 <img src="screenshots/projects.png.png" alt="Project Management" width="850"/>
 
-</div>
 
 ### Task Management
 
