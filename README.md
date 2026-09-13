@@ -247,6 +247,30 @@ Start the backend and frontend development servers according to the project conf
 
 ---
 
+## Demo Credentials
+
+Use the following demo accounts to explore the different role-based features of the application.
+
+> **Demo Password:** `Demo@12345`
+
+| Role                | Username             | Password     |
+| ------------------- | -------------------- | ------------ |
+| **Admin**           | `admin@velozity.com` | `Demo@12345` |
+| **Project Manager** | `pm1@velozity.com`   | `Demo@12345` |
+| **Project Manager** | `pm2@velozity.com`   | `Demo@12345` |
+| **Developer**       | `dev1@velozity.com`  | `Demo@12345` |
+| **Developer**       | `dev2@velozity.com`  | `Demo@12345` |
+| **Developer**       | `dev3@velozity.com`  | `Demo@12345` |
+| **Developer**       | `dev4@velozity.com`  | `Demo@12345` |
+
+### Live Application
+
+**Frontend:** https://velozity-dashboard-puce.vercel.app/
+
+These credentials are provided for **internship evaluation and demonstration purposes**.
+
+---
+
 ## Testing
 
 The application can be tested across the following areas:
@@ -296,6 +320,7 @@ The application can be tested across the following areas:
 * Performance optimization
 
 ---
+
 ## Author
 
 ### Jasmine Flora J
@@ -304,18 +329,14 @@ The application can be tested across the following areas:
 
 Manakula Vinayagar Institute of Technology, Puducherry
 
-
 [![GitHub](https://img.shields.io/badge/GitHub-jasminefloraa-181717?style=for-the-badge\&logo=github)](https://github.com/jasminefloraa)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Jasmine%20Flora-0A66C2?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/jasmine-flora/)
 
-
 ---
-
 
 ### Velozity Dashboard
 
 **Built with React, Node.js, Express & MongoDB**
 
 This project was developed for educational and internship evaluation purposes.
-
