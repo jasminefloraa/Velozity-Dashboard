@@ -832,7 +832,16 @@ function App() {
      LOGIN
   ===================================================== */
 
+  const fillDemoAccount = (
+  demoEmail: string,
+  demoPassword: string
+) => {
+  setEmail(demoEmail);
+  setPassword(demoPassword);
+  setMessage("Demo account selected. Click Login to continue.");
+};
   const handleLogin = async (
+    
     event: FormEvent
   ) => {
     event.preventDefault();
@@ -1944,48 +1953,93 @@ function App() {
             </p>
 
             <form
-              onSubmit={
-                handleLogin
-              }
-            >
-              <label>
-                Email
-              </label>
+  onSubmit={
+    handleLogin
+  }
+>
+  <label>
+    Email
+  </label>
 
-              <input
-                type="email"
-                value={email}
-                onChange={(event) =>
-                  setEmail(
-                    event.target.value
-                  )
-                }
-                placeholder="Enter your email"
-                required
-              />
+  <input
+    type="email"
+    value={email}
+    onChange={(event) =>
+      setEmail(
+        event.target.value
+      )
+    }
+    placeholder="Enter your email"
+    required
+  />
 
-              <label>
-                Password
-              </label>
+  <label>
+    Password
+  </label>
 
-              <input
-                type="password"
-                value={password}
-                onChange={(event) =>
-                  setPassword(
-                    event.target.value
-                  )
-                }
-                placeholder="Enter your password"
-                required
-              />
+  <input
+    type="password"
+    value={password}
+    onChange={(event) =>
+      setPassword(
+        event.target.value
+      )
+    }
+    placeholder="Enter your password"
+    required
+  />
 
-              <button
-                type="submit"
-              >
-                Login
-              </button>
-            </form>
+  <button
+    type="submit"
+  >
+    Login
+  </button>
+</form>
+
+<div className="demo-login">
+  <div className="demo-login-heading">
+    <strong>Demo Accounts</strong>
+    <span>Quick access for testing</span>
+  </div>
+
+  <div className="demo-login-buttons">
+    <button
+      type="button"
+      onClick={() =>
+        fillDemoAccount(
+          "admin@velozity.com",
+          "Demo@12345"
+        )
+      }
+    >
+      Admin
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        fillDemoAccount(
+          "pm1@velozity.com",
+          "Demo@12345"
+        )
+      }
+    >
+      Project Manager
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        fillDemoAccount(
+          "dev1@velozity.com",
+          "Demo@12345"
+        )
+      }
+    >
+      Developer
+    </button>
+  </div>
+</div>
 
             {message && (
               <div className="message">

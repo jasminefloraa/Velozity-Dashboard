@@ -1163,4 +1163,55 @@ textarea:focus-visible {
     padding: 20px;
   }
 }
+.demo-login {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+}
 
+.demo-login-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.demo-login-heading strong {
+  font-size: 14px;
+  color: #111827;
+}
+
+.demo-login-heading span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.demo-login-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.demo-login-buttons button {
+  flex: 1;
+  min-width: 100px;
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-login-buttons button:hover {
+  border-color: #111827;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.demo-login-buttons button:active {
+  transform: translateY(1px);
+}
