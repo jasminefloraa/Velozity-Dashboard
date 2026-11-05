@@ -398,4 +398,4 @@ Manakula Vinayagar Institute of Technology, Puducherry
 
 **Built with React, Node.js, Express, PostgreSQL & Prisma**
 
-This project was developed for educational and internship evaluation purposes.
+
